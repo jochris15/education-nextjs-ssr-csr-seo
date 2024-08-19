@@ -5,7 +5,7 @@ import ProductCard from "@/components/ProductCard"
 import { useEffect, useState } from "react"
 import Loading from "./loading"
 
-export default function Products() {
+export default function ProductsClient() {
     const [products, setProducts] = useState<ProductType[]>([])
 
     async function fetchProducts() {

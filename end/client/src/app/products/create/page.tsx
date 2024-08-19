@@ -2,7 +2,7 @@ import { Params } from "@/type"
 import { addProduct } from "@/action"
 
 
-export default function Page({ searchParams }: Params) {
+export default function AddProduct({ searchParams }: Params) {
     const message = searchParams.message
 
     return (

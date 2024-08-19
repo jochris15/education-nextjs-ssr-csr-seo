@@ -1,7 +1,7 @@
 import { ProductType } from "@/type"
 import ProductCard from "@/components/ProductCard"
 
-export default async function Page() {
+export default async function Products() {
     const response = await fetch('http://localhost:3000/products', { cache: 'no-store' })
     const products: ProductType[] = await response.json()
 

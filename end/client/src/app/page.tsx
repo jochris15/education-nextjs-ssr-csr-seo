@@ -1,4 +1,4 @@
-export default function Page() {
+export default function Home() {
   return (
     <>
       <div className="h-screen flex flex items-center">

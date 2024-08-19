@@ -34,7 +34,7 @@ export async function generateMetadata(
     }
 }
 
-export default async function Page({ params }: { params: { id: number } }) {
+export default async function DetailProduct({ params }: { params: { id: number } }) {
     const response = await fetch(`http://localhost:3000/products/${params.id}`, { cache: 'no-store' })
     const data: ProductType = await response.json()
 
