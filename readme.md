@@ -42,8 +42,17 @@ Cara rendering juga bisa dicampur, jika kita menginginkan component tersebut int
 
 Apa itu server action ? sebuah function yang asynchronus yang dijalankan di server. Kita bisa menambahkan 'use server' di dalam sebuah function untuk merubah function tersebut menjadi server action.
 
+## Metadata
+[Dokumentasi metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)
 
+NextJS menyediakan Metadata API yang bisa digunakan untuk mendefinisikan metadata aplikasi kita, sebuah tags(link / meta tags) yang biasanya ada di **head** element dalam HTML aplikasi kita. Bermanfaat untuk meningkatkan SEO & web shareability.
+<br>
+<br>
+Karena data kita tidak statis , kita gunakan **dynamic metadata**
 
+[Dokumentasi dynamic metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata#dynamic-metadata)
+
+[Dokumentasi opengraph & twitter](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
 
 
 

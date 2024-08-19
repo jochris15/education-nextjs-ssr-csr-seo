@@ -10,11 +10,11 @@ export default function Products() {
 
     async function fetchProducts() {
         try {
-            const response = await fetch('https://dummyjson.com/products', { cache: 'no-store' })
+            const response = await fetch('http://localhost:3000/products', { cache: 'no-store' })
 
             if (!response.ok) throw new Error(`Response status : ${response.status}`)
 
-            const { products } = await response.json()
+            const products = await response.json()
 
             setProducts(products)
         } catch (error) {

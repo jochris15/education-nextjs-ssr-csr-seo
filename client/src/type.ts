@@ -3,4 +3,9 @@ export type ProductType = {
     thumbnail: string,
     title: string,
     description: string
-}   
+}
+
+export type Params = {
+    params: {},
+    searchParams: { message?: string }
+}
