@@ -3,9 +3,11 @@
 ## Why use server side rendering
 [Dokumentasi benefit SSR](https://nextjs.org/docs/app/building-your-application/rendering/server-components#benefits-of-server-rendering)
 
-- Data fetching
+- Data fetching 
 - Security 
-- Performance 
+- Caching 
+- Performance
+- Initial page load
 - SEO & Social network shareability 
 - Streaming
 
@@ -37,8 +39,6 @@ Cara rendering juga bisa dicampur, jika kita menginginkan component tersebut int
 [Dokumentasi server action](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
 
 [Dokumentasi contoh form](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#forms)
-
-[Dokumentasi fetch post](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
 Apa itu server action ? sebuah function yang asynchronus yang dijalankan di server. Kita bisa menambahkan 'use server' di dalam sebuah function untuk merubah function tersebut menjadi server action.
 

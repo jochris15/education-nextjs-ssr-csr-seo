@@ -1,59 +1,34 @@
-import { ProductType } from "@/type"
-import Link from 'next/link'
-
-import type { Metadata, ResolvingMetadata } from 'next'
-
-type Props = {
-    params: { id: string }
-    searchParams: { [key: string]: string | string[] | undefined }
-}
-
-export async function generateMetadata(
-    { params, searchParams }: Props,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
-
-    // fetch data
-    const product = await fetch(`http://localhost:3000/products/${params.id}`).then((res) => res.json())
-
-    // optionally access and extend (rather than replace) parent metadata
-    const previousImages = (await parent).openGraph?.images || []
-
-    return {
-        title: product.title,
-        description: product.description,
-        twitter: {
-            card: 'summary_large_image',
-            title: 'Next.js',
-            description: 'The React Framework for the Web',
-            images: ['https://nextjs.org/og.png']
-        },
-        openGraph: {
-            images: ['/some-specific-page-image.jpg', ...previousImages]
-        }
-    }
-}
+import Link from "next/link"
 
 export default async function DetailProduct({ params }: { params: { id: number } }) {
-    const response = await fetch(`http://localhost:3000/products/${params.id}`, { cache: 'no-store' })
-    const data: ProductType = await response.json()
+    const { id } = params
+    const response = await fetch(`https://dummyjson.com/products/${id}`)
+    const product: Product = await response.json()
 
     return (
         <>
-            <div className="h-screen flex justify-center items-center">
-                <div className="card glass w-1/2 p-5">
-                    <figure>
-                        <img
-                            src={data.thumbnail}
-                            alt="data!" />
-                    </figure>
-                    <div className="card-body">
-                        <h1 className="card-title">{data.title}</h1>
-                        <p>{data.description}</p>
-                        <Link href='/products' className="btn btn-primary mt-10">Back to products</Link>
+            <div className="flex flex-start bg-white border-2 border-black p-5 shadow-[2px_2px_0px_rgba(0,0,0,1)] h-full mt-10">
+                <div>
+                    <img
+                        src={product.thumbnail}
+                        alt="product image"
+                        className="border-2 border-black shadow-[2px_2px_0px_rgba(0,0,0,1)] h-full bg-blue-300"
+                    />
+                </div>
+                <div className="flex mx-10 flex-col w-1/2 justify-between">
+                    <b className="text-4xl mb-5">
+                        {product.title}
+                    </b>
+                    <p className="h-full">
+                        {product.description}
+                    </p>
+                    <div>
+                        <Link href="/products" >
+                            <button className="border-2 border-black p-2 shadow-[2px_2px_0px_rgba(0,0,0,1)] w-40 bg-blue-300 hover:bg-blue-400 font-bold">Back</button>
+                        </Link>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

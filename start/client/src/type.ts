@@ -4,8 +4,3 @@ export type ProductType = {
     title: string,
     description: string
 }
-
-export type Params = {
-    params: {},
-    searchParams: { message?: string }
-}

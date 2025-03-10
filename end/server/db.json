@@ -71,6 +71,18 @@
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png",
       "title": "Powder Canister",
       "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish"
+    },
+    {
+      "id": "ea81",
+      "title": "test product",
+      "description": "hehehe",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
+    },
+    {
+      "id": "c10d",
+      "title": "server data baru",
+      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+      "description": "server data baruserver data baruserver data baruserver data baru"
     }
   ]
 }
