@@ -1,4 +1,4 @@
-# NextJS Server Component & Action
+# NextJS SSR,CSR & SEO
 
 ## SSR VS CSR
 **Server Side Rendering**
@@ -56,7 +56,7 @@ Cara rendering juga bisa dicampur, jika kita menginginkan component tersebut int
 
 Apa itu server action ? sebuah function yang asynchronus yang dijalankan di server. Kita bisa menambahkan 'use server' di dalam sebuah function untuk merubah function tersebut menjadi server action.
 
-## Metadata
+## Metadata (Untuk Search Engine Optimization)
 [Dokumentasi metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)
 
 [Dokumentasi basic field metadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata#basic-fields)
