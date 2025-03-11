@@ -24,17 +24,6 @@ Benefit :
 - Interaktifitas
 - Browser API
 
-## Directive
-[Dokumentasi directive](https://react.dev/reference/rsc/directives)
-
-By default, NextJS menggunakan SSR. Jika ingin melakukan rendering secara CSR, gunakan 'use client' di filenya.
-<br>
-<br>
-Jika ingin merender secara CSR, kita harus mengubah kodingan kita seperti menggunakan react. By default ada react strict mode. Jika ingin mengubah , bisa edit di next.config.mjs
-<br>
-<br>
-Cara rendering juga bisa dicampur, jika kita menginginkan component tersebut interaktif, kita harus menggunakan CSR , contoh : di product card kita ingin ada onClick (event interaktif, di server gabisa), maka kita bisa merender product card secara client, tetapi fetch datanya tetap secara server
-
 ## When to use server and client components?
 **Server**
 - fetch data 
@@ -48,6 +37,17 @@ Cara rendering juga bisa dicampur, jika kita menginginkan component tersebut int
 - jika sedang menggunakan api browser
 - jika ingin menggunakan class component react
 - jika butuh Optimistic UI Update (sebelum server response), ex: add comment di post sosial media
+
+## Directive
+[Dokumentasi directive](https://react.dev/reference/rsc/directives)
+
+By default, NextJS menggunakan SSR. Jika ingin melakukan rendering secara CSR, gunakan 'use client' di filenya.
+<br>
+<br>
+Jika ingin merender secara CSR, kita harus mengubah kodingan kita seperti menggunakan react. By default ada react strict mode. Jika ingin mengubah , bisa edit di next.config.mjs
+<br>
+<br>
+Cara rendering juga bisa dicampur, jika kita menginginkan component tersebut interaktif, kita harus menggunakan CSR , contoh : di product card kita ingin ada onClick (event interaktif, di server gabisa), maka kita bisa merender product card secara client, tetapi fetch datanya tetap secara server
 
 ## Server action
 [Dokumentasi server action](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
