@@ -1,8 +1,9 @@
 import Link from "next/link"
+import baseUrl from '@/api/baseUrl'
 
 export default async function DetailProduct({ params }: { params: { id: number } }) {
     const { id } = params
-    const response = await fetch(`https://dummyjson.com/products/${id}`)
+    const response = await fetch(`${baseUrl}/products/${id}`)
     const product: Product = await response.json()
 
     return (

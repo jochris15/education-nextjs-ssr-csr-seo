@@ -1,8 +1,29 @@
 import Link from "next/link"
+import baseUrl from '@/api/baseUrl'
+import type { Metadata } from 'next'
+
+export async function generateMetadata(
+    { params }: { params: { id: number } }
+): Promise<Metadata> {
+    // read route params
+    const { id } = await params
+
+    // fetch data
+    const response = await fetch(`${baseUrl}/products/${id}`)
+    const product: Product = await response.json()
+
+    return {
+        title: product.title,
+        description: product.description,
+        openGraph: {
+            images: product.thumbnail,
+        },
+    }
+}
 
 export default async function DetailProduct({ params }: { params: { id: number } }) {
     const { id } = params
-    const response = await fetch(`https://dummyjson.com/products/${id}`)
+    const response = await fetch(`${baseUrl}/products/${id}`)
     const product: Product = await response.json()
 
     return (

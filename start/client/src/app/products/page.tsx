@@ -3,7 +3,7 @@ import baseUrl from '@/api/baseUrl'
 
 export default async function Products() {
     const response = await fetch(`${baseUrl}/products`)
-    const products: Product = await response.json()
+    const products: Product[] = await response.json()
 
     return (
         <>

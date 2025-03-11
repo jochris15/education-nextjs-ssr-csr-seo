@@ -1,8 +1,11 @@
 # NextJS Server Component & Action
 
-## Why use server side rendering
+## SSR VS CSR
+**Server Side Rendering**
+
 [Dokumentasi benefit SSR](https://nextjs.org/docs/app/building-your-application/rendering/server-components#benefits-of-server-rendering)
 
+Benefit : 
 - Data fetching 
 - Security 
 - Caching 
@@ -10,6 +13,16 @@
 - Initial page load
 - SEO & Social network shareability 
 - Streaming
+
+<br>
+
+**Client Side Rendering** 
+
+[Dokumentasi benefit CSR](https://nextjs.org/docs/app/building-your-application/rendering/client-components#benefits-of-client-rendering)
+
+Benefit : 
+- Interaktifitas
+- Browser API
 
 ## Directive
 [Dokumentasi directive](https://react.dev/reference/rsc/directives)
@@ -30,10 +43,11 @@ Cara rendering juga bisa dicampur, jika kita menginginkan component tersebut int
 - jika mau menyimpan dependencies besar
 
 **Client**
-- jika butuh interaktif & event listener
+- jika butuh interaktifitas & event listener
 - jika butuh menggunakan hooks / custom hooks / lifecyle react 
 - jika sedang menggunakan api browser
 - jika ingin menggunakan class component react
+- jika butuh Optimistic UI Update (sebelum server response), ex: add comment di post sosial media
 
 ## Server action
 [Dokumentasi server action](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
@@ -45,14 +59,15 @@ Apa itu server action ? sebuah function yang asynchronus yang dijalankan di serv
 ## Metadata
 [Dokumentasi metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)
 
-NextJS menyediakan Metadata API yang bisa digunakan untuk mendefinisikan metadata aplikasi kita, sebuah tags(link / meta tags) yang biasanya ada di **head** element dalam HTML aplikasi kita. Bermanfaat untuk meningkatkan SEO & web shareability.
-<br>
-<br>
-Karena data kita tidak statis , kita gunakan **dynamic metadata**
+[Dokumentasi basic field metadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata#basic-fields)
 
 [Dokumentasi dynamic metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata#dynamic-metadata)
 
-[Dokumentasi opengraph & twitter](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)
+NextJS menyediakan Metadata API yang bisa digunakan untuk mendefinisikan metadata aplikasi kita, sebuah tags(link / meta tags) yang biasanya ada di **head** element dalam HTML aplikasi kita. Bermanfaat untuk meningkatkan SEO & web shareability.
+
+
+
+
 
 
 
