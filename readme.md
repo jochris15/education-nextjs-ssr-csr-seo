@@ -59,7 +59,7 @@ Apa itu server action ? sebuah function yang asynchronus yang dijalankan di serv
 ## Metadata (Untuk Search Engine Optimization)
 [Dokumentasi metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)
 
-[Dokumentasi basic field metadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata#basic-fields)
+[Dokumentasi field metadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields)
 
 [Dokumentasi dynamic metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata#dynamic-metadata)
 
